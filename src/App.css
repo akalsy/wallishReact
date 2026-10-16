@@ -1,0 +1,676 @@
+:root {
+  color: #f2f2f7;
+  background: #1c1c1e;
+  font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.wallish-home {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 28px 28px 24px;
+  background: #1c1c1e;
+}
+
+.wallish-home__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.wallish-home__heading {
+  min-width: 0;
+}
+
+.wallish-home__settings {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  margin-top: 4px;
+  padding: 6px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #d1d1d6;
+  cursor: pointer;
+}
+
+.wallish-home__settings svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.wallish-home__kicker {
+  margin: 0;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #8e8e93;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.wallish-home__title {
+  margin: 6px 0 0;
+  font-size: 48px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.wallish-home__stage {
+  position: relative;
+  margin-top: 20px;
+}
+
+.wallish-home__photo {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 18px;
+  background: #2c2c2e;
+}
+
+.wallish-home__photo--empty {
+  display: grid;
+  place-items: center;
+  color: #bdc3c7;
+}
+
+.wallish-home__copy {
+  min-height: 22px;
+  margin: 14px 0 0;
+  color: #8e8e93;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.wallish-home__error {
+  margin: 8px 0 0;
+  color: #e74c3c;
+}
+
+.wallish-home__actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.wallish-home__button,
+.wallish-home__link {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 10px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.wallish-home__button {
+  color: #f2f2f7;
+}
+
+.wallish-home__button--today {
+  background: linear-gradient(135deg, #5b8ec4 0%, #2c5278 100%);
+}
+
+.wallish-home__button--past {
+  background: linear-gradient(135deg, #7a68a0 0%, #433858 100%);
+}
+
+.wallish-home__button--custom {
+  background: linear-gradient(135deg, #a06a52 0%, #5c3336 100%);
+}
+
+.wallish-home__button:disabled {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+.wallish-home__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin-top: 18px;
+}
+
+.wallish-home__link {
+  background: transparent;
+  color: #aeaeb2;
+  padding: 4px 0;
+}
+
+.wallish-home__hint {
+  margin: 22px 0 0;
+  color: #636366;
+  font-size: 12px;
+  text-align: center;
+}
+
+.wallish-clip {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #1f2a36;
+}
+
+.wallish-clip__bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: none;
+  padding: 12px 16px;
+}
+
+.wallish-clip__back {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: #3a3a3c;
+  color: #f2f2f7;
+  font: inherit;
+  cursor: pointer;
+}
+
+.wallish-clip__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.wallish-clip__host {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.wallish-clip__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.wallish-settings {
+  box-sizing: border-box;
+  height: 100%;
+  overflow: auto;
+  padding: 18px 22px 28px;
+  background: #1c1c1e;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.28) transparent;
+}
+
+.wallish-settings::-webkit-scrollbar {
+  width: 8px;
+}
+
+.wallish-settings::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.wallish-settings::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+  background-clip: padding-box;
+}
+
+.wallish-settings__bar {
+  display: grid;
+  grid-template-columns: 88px 1fr 88px;
+  align-items: center;
+}
+
+.wallish-settings__back {
+  justify-self: start;
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: #3a3a3c;
+  color: #f2f2f7;
+  font: inherit;
+  cursor: pointer;
+}
+
+.wallish-settings__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 650;
+  text-align: center;
+}
+
+.wallish-settings__body {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 18px;
+}
+
+.wallish-settings__preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.wallish-settings__preview .wallish-home__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wallish-settings__hint,
+.wallish-settings__status {
+  margin: 0;
+  color: #8e8e93;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.wallish-settings__status {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.wallish-settings__label {
+  margin: 16px 0 0;
+  color: #aeaeb2;
+  font-size: 13px;
+}
+
+.wallish-settings__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  color: #f2f2f7;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.wallish-settings__check {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wallish-settings__switch {
+  position: relative;
+  width: 46px;
+  height: 28px;
+  border-radius: 999px;
+  background: #3a3a3c;
+}
+
+.wallish-settings__switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f2f2f7;
+}
+
+.wallish-settings__switch--on {
+  background: #8e8e93;
+}
+
+.wallish-settings__switch--on::after {
+  left: 21px;
+}
+
+.wallish-settings__places {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.wallish-settings__place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 52px;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 12px;
+  background: #2c2c2e;
+  color: #aeaeb2;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.wallish-settings__place--on {
+  background: #3a3a3c;
+  color: #f2f2f7;
+  box-shadow: inset 0 0 0 1px #636366;
+}
+
+.wallish-settings__mark {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
+.wallish-settings__mark::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.wallish-settings__mark--top::after {
+  top: 3px;
+  left: 5px;
+}
+
+.wallish-settings__mark--center::after {
+  top: 8px;
+  left: 5px;
+}
+
+.wallish-settings__mark--bottom::after {
+  bottom: 3px;
+  left: 5px;
+}
+
+.wallish-settings__mark--left::after {
+  top: 8px;
+  left: 3px;
+  width: 2px;
+  height: 8px;
+}
+
+.wallish-settings__mark--right::after {
+  top: 8px;
+  right: 3px;
+  width: 2px;
+  height: 8px;
+}
+
+.wallish-settings__color {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.wallish-settings__color .wallish-settings__label {
+  margin: 0;
+}
+
+.wallish-settings__picker {
+  width: 44px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.wallish-settings__hex {
+  color: #f2f2f7;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.wallish-settings__sizes {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.wallish-settings__size {
+  min-width: 52px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #2c2c2e;
+  color: #aeaeb2;
+  font: inherit;
+  cursor: pointer;
+}
+
+.wallish-settings__size--on {
+  background: #3a3a3c;
+  color: #f2f2f7;
+  box-shadow: inset 0 0 0 1px #636366;
+}
+
+.wallish-settings__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.wallish-settings__save {
+  min-width: 180px;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 36px;
+  background: #5c3336;
+  color: #f2f2f7;
+  font: inherit;
+  cursor: pointer;
+}
+
+.wallish-settings__save:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.wallish-custom {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 16px 24px 32px;
+}
+
+.wallish-custom__bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wallish-custom__back {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: #3a3a3c;
+  color: #f2f2f7;
+  font: inherit;
+  cursor: pointer;
+}
+
+.wallish-custom__button {
+  border: 0;
+  border-radius: 999px;
+  background: #34495e;
+  color: #ecf0f1;
+  font: inherit;
+  cursor: pointer;
+}
+
+.wallish-custom__title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.wallish-custom__frame {
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #2c3e50;
+  touch-action: none;
+}
+
+.wallish-custom__frame--drag {
+  cursor: grab;
+}
+
+.wallish-custom__shot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: none;
+  user-select: none;
+}
+
+.wallish-custom__name,
+.wallish-custom__hint,
+.wallish-custom__status {
+  margin: 12px 0 0;
+  color: #bdc3c7;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.wallish-custom__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.wallish-custom__button {
+  padding: 10px 18px;
+}
+
+.wallish-custom__button--accent {
+  background: #f1c40f;
+  color: #1f2a36;
+}
+
+.wallish-custom__button:disabled {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+.wallish-favorites {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 16px 24px 32px;
+}
+
+.wallish-favorites__bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wallish-favorites__back {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: #3a3a3c;
+  color: #f2f2f7;
+  font: inherit;
+  cursor: pointer;
+}
+
+.wallish-favorites__title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.wallish-favorites__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.wallish-favorites__card {
+  overflow: hidden;
+  border-radius: 12px;
+  background: #2c3e50;
+}
+
+.wallish-favorites__pick {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.wallish-favorites__thumb {
+  display: block;
+  width: 100%;
+  height: 96px;
+  object-fit: cover;
+  background: #1f2a36;
+}
+
+.wallish-favorites__thumb--empty {
+  display: grid;
+  place-items: center;
+  color: #7f8c8d;
+  font-size: 12px;
+}
+
+.wallish-favorites__word {
+  margin: 0;
+  padding: 8px 10px 0;
+  font-size: 14px;
+}
+
+.wallish-favorites__remove {
+  margin: 4px 10px 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #e74c3c;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.wallish-favorites__empty {
+  margin: 24px 0 0;
+  color: #bdc3c7;
+  line-height: 1.5;
+}
+
+.wallish-home__link:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.wallish-clip__error {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background: #1f2a36;
+  color: #e74c3c;
+}
